@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/miaosha?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 60
+
+    pool:
+      max-idle: 500
+      max-wait: 10000
+      maxTotal: 10
+    password: 123456
+    database: 0
+
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+# 之后的填写mybatis的mapper书写路径
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#redis
